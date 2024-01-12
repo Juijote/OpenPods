@@ -49,6 +49,12 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/juij"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/juij" />
+
+        <Button
             android:id="@+id/website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
