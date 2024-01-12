@@ -1,0 +1,39 @@
+# 工作流程名称
+name: 构建
+
+# 触发工作流程的事件，包括推送(push)和拉取请求(pull_request)
+on: [push, pull_request]
+
+# 工作流程的定义
+jobs:
+  # 任务名称
+  check:
+    # 任务显示名称
+    name: 构建和发布
+    # 运行环境，此处选择 Ubuntu 最新版本
+    runs-on: ubuntu-latest
+    
+    # 任务步骤
+    steps:
+      # 步骤1: 使用 actions/checkout 动作检出代码
+      - name: 检出代码
+        uses: actions/checkout@v2
+      
+      # 步骤2: 使用 actions/setup-java 动作设置 Java 环境
+      - name: 配置 Java 环境
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+          
+      # 步骤3: 运行 Gradle 构建命令
+      - name: 执行 Gradle 构建
+        run: |
+          ./gradlew build --stacktrace
+          cp app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/OpenPods.apk
+      
+     # 步骤4: 使用 actions/upload-artifact@v3 动作上传构建的 APK 文件
+      - name: 上传 APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: OpenPods
+          path: app/build/outputs/apk/release/OpenPods.apk
