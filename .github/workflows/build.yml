@@ -21,19 +21,21 @@ jobs:
       
       # 步骤2: 使用 actions/setup-java 动作设置 Java 环境
       - name: 配置 Java 环境
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
-          java-version: 17
+          distribution: 'adopt'
+          java-version: '17'
           
       # 步骤3: 运行 Gradle 构建命令
       - name: 执行 Gradle 构建
         run: |
+          chmod +x gradlew
           ./gradlew build --stacktrace
           cp app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/OpenPods.apk
       
-     # 步骤4: 使用 actions/upload-artifact@v3 动作上传构建的 APK 文件
+     # 步骤4: 使用 actions/upload-artifact@v2 动作上传构建的 APK 文件
       - name: 上传 APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: OpenPods
           path: app/build/outputs/apk/release/OpenPods.apk
