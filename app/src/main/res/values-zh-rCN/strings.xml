@@ -20,8 +20,8 @@
     <string name="msg_loc2_perm" tools:ignore="MissingTranslation">未授予后台位置权限，请在设置中启用。</string>
     <string name="msg_notif_perm" tools:ignore="MissingTranslation">未授予通知权限，请在设置中启用。</string>
 
-    <string name="main_description">当 AirPods 连接时，将会显示通知</string>
-    <string name="supportedDevicesTitle"><u>支持设备:</u></string>
+    <string name="main_description">AirPods 连接时，将会显示通知。</string>
+    <string name="supportedDevicesTitle"><u><b>支持设备:</b></u></string>
     <string name="airpods1">&#8226; Apple AirPods 第一代</string>
     <string name="airpods2">&#8226; Apple AirPods 第二代</string>
     <string name="airpods3" tools:ignore="MissingTranslation">&#8226; Apple AirPods 第三代</string>
@@ -43,9 +43,9 @@
 
     <string name="settings" tools:ignore="MissingTranslation">设置</string>
     <string name="batterySaver">省电模式（不推荐）</string>
-    <string name="batterySaver_desc">如果觉得蓝牙功能耗电过多，请启用此功能</string>
+    <string name="batterySaver_desc">如果觉得蓝牙功能耗电过多，请启用此功能。</string>
     <string name="restart" tools:ignore="MissingTranslation">重启服务</string>
-    <string name="restart_desc" tools:ignore="MissingTranslation">如果未显示通知，请执行此操作</string>
+    <string name="restart_desc" tools:ignore="MissingTranslation">如果未显示通知，请执行此操作。</string>
 
     <string name="about">关于</string>
     <string name="about_dev">由 Federico Dossena 和 Itai Levin 开发</string>
@@ -58,4 +58,9 @@
     <string name="website_url" translatable="false">https://fdossena.com/?p=openPods/index.frag</string>
     <string name="github_url" translatable="false">https://github.com/adolfintel/OpenPods</string>
     <string name="donate_url" translatable="false">https://paypal.me/sineisochronic</string>
+
+    <!-- 汉化相关 -->
+    <string name="juij">更新下载</string>
+    <string name="Juij_url" translatable="false">https://juij.eu.org/#Chiaki</string>
+
 </resources>

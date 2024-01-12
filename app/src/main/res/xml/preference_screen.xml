@@ -36,6 +36,15 @@
         </Preference>
 
         <Preference
+            android:key="juij"
+            android:title="@string/juij"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/juij_url" />
+        </Preference>
+
+        <Preference
             android:key="fdroid"
             android:title="@string/fdroid"
             app:iconSpaceReserved="false">

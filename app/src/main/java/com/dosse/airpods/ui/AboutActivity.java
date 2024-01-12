@@ -33,6 +33,7 @@ public class AboutActivity extends AppCompatActivity {
 
         ((WebView)(findViewById(R.id.license))).loadUrl("file:///android_asset/license.html");
 
+        findViewById(R.id.juij).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.juij_url)))));
         findViewById(R.id.website).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.website_url)))));
         findViewById(R.id.github).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.github_url)))));
         findViewById(R.id.donate).setOnClickListener(v -> {
