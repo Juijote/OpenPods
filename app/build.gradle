@@ -11,13 +11,17 @@ android {
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 22
-        versionName '1.9.1'
+        versionName '1.9.1_Juij'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release
+    }
+
     buildTypes {
-        debug {
+        release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
