@@ -61,6 +61,6 @@
 
     <!-- 汉化相关 -->
     <string name="juij">更新下载</string>
-    <string name="Juij_url" translatable="false">https://juij.eu.org/#Chiaki</string>
+    <string name="Juij_url" translatable="false">https://juij.eu.org/#OpenPods</string>
 
 </resources>
